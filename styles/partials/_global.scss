@@ -1,0 +1,47 @@
+// Color variables
+
+$textColor: #2c2c2c;
+$shadowColor: #f8e71c;
+$footerBGColor: #4f4f4f;
+$buttonColor: #0e902d;
+$sectionBGColor: #f0efed;
+$commentDataColor: #074115;
+
+// Font variables
+// Main heading 
+@mixin brandStyle($sizevalue) {
+    font-size: $sizevalue;
+    font-family: 'JosefinSans', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+//Secondary headings and buttons
+@mixin headingSection($sizeValue, $letterSpacing) {
+    font-size: $sizeValue;
+    letter-spacing: $letterSpacing;
+    font-family: 'JosefinSans', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+// Founder heading
+@mixin founderHeading($sizeValue, $letterSpacing) {
+    font-size: $sizeValue;
+    letter-spacing: $letterSpacing;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+//Body text 
+@mixin bodyText($sizeValue, $lineValue) {
+    font-size: $sizeValue;
+    line-height: $lineValue;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+@mixin formStyle($sizeValue, $lineValue) {
+    font-size: $sizeValue;
+    line-height: $lineValue;
+    font-family: 'JosefinSans', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
