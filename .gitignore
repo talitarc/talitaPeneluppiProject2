@@ -4,3 +4,4 @@ node_modules
 *.zip
 *.scss
 partials
+prepros-6.config
