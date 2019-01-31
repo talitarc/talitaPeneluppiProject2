@@ -11,7 +11,7 @@ $commentDataColor: #074115;
 // Main heading 
 @mixin brandStyle($sizevalue) {
     font-size: $sizevalue;
-    font-family: 'JosefinSans', Arial, Helvetica, sans-serif;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     font-weight: normal;
 }
 
@@ -19,17 +19,17 @@ $commentDataColor: #074115;
 @mixin headingSection($sizeValue, $letterSpacing) {
     font-size: $sizeValue;
     letter-spacing: $letterSpacing;
-    font-family: 'JosefinSans', Arial, Helvetica, sans-serif;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 
-// Founder heading
-@mixin founderHeading($sizeValue, $letterSpacing) {
-    font-size: $sizeValue;
-    letter-spacing: $letterSpacing;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
+// // Founder heading - FAtima changed to Josefin Sans
+// @mixin founderHeading($sizeValue, $letterSpacing) {
+//     font-size: $sizeValue;
+//     letter-spacing: $letterSpacing;
+//     font-family: 'Roboto', Arial, Helvetica, sans-serif;
+//     font-weight: bold;
+// }
 
 //Body text 
 @mixin bodyText($sizeValue, $lineValue) {
@@ -42,6 +42,35 @@ $commentDataColor: #074115;
 @mixin formStyle($sizeValue, $lineValue) {
     font-size: $sizeValue;
     line-height: $lineValue;
-    font-family: 'JosefinSans', Arial, Helvetica, sans-serif;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     font-weight: lighter;
 }
+
+// Font-size default
+
+body {
+    font-size: 125%;
+}
+
+// Mobile hidden itens
+
+.desktopOnly {
+    display: none;
+}
+
+// Wrapper size and position
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+// Remove a decoration {
+    a {
+        text-decoration: none;
+    }
+
+// Remove li decoration {
+    li {
+        text-decoration: none;
+        list-style-type: none;
+    }

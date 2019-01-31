@@ -131,3 +131,260 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
+
+body {
+  font-size: 125%; }
+
+.desktopOnly {
+  display: none; }
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none; }
+
+li {
+  text-decoration: none;
+  list-style-type: none; }
+
+header {
+  background-image: url(../../images/homeHeader.jpg);
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  height: 80vh;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto; }
+  header .wrapper {
+    margin: 10% auto; }
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  position: relative;
+  margin: 5%; }
+  nav ul {
+    display: none; }
+  nav input {
+    position: absolute;
+    left: -2000; }
+  nav a {
+    font-size: 1rem;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #f0efed;
+    padding: 20px; }
+
+.dropdown {
+  color: #f8e71c;
+  font-size: 2rem;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end; }
+
+nav:hover ul,
+nav:focus-within ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap; }
+  nav:hover ul li,
+  nav:focus-within ul li {
+    background-color: #4f4f4f;
+    border: 1px solid #f8e71c;
+    line-height: 3rem; }
+
+h1 {
+  font-size: 4rem;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: white;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  position: absolute; }
+  h1 span {
+    color: #f8e71c; }
+
+main {
+  background-color: #f0efed; }
+  main .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  main h3 {
+    font-size: 2rem;
+    letter-spacing: 1.3px;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-bottom: 15px; }
+  main p {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: center; }
+
+button {
+  background: #0e902d;
+  border: none;
+  margin: 20px; }
+  button a {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold; }
+
+.btnFindOut {
+  height: 50px;
+  width: 200px; }
+
+.btnRead {
+  height: 50px;
+  width: 120px; }
+
+.photoArticle {
+  width: 100%;
+  -webkit-box-shadow: 5px 5px #f8e71c;
+  box-shadow: 5px 5px #f8e71c; }
+
+section .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  section .wrapper ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0; }
+
+section h3 {
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold; }
+
+section p {
+  font-size: 1rem;
+  line-height: 1.7rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-align: center; }
+
+.sectionInfo {
+  background-color: #f0efed; }
+  .sectionInfo li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: left;
+    -ms-flex-pack: left;
+    justify-content: left;
+    margin: 10px auto; }
+  .sectionInfo i {
+    margin: 10px; }
+  .sectionInfo h3 {
+    margin: 10px 0; }
+  .sectionInfo p {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    text-align: left; }
+
+.bannerSection {
+  width: 100%; }
+
+.sectionFounder {
+  margin: 30px auto; }
+  .sectionFounder h3 {
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    font-weight: bold; }
+  .sectionFounder .contentFounder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 10px auto; }
+    .sectionFounder .contentFounder p {
+      text-align: center; }
+
+.galleryPhoto2,
+.galleryPhoto3 {
+  width: calc(98% / 2); }
+
+footer {
+  background-color: #4f4f4f;
+  color: white;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 2.5rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-align: center; }
