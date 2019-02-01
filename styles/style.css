@@ -150,7 +150,7 @@ li {
   list-style-type: none; }
 
 header {
-  background-image: url(../../images/homeHeader.jpg);
+  background-image: url("./../images/homeHeader.jpg");
   background-position: center center;
   background-size: cover;
   display: -webkit-box;
@@ -181,10 +181,14 @@ nav {
   position: relative;
   margin: 5%; }
   nav ul {
-    display: none; }
-  nav input {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
     position: absolute;
-    left: -2000; }
+    top: 20;
+    right: 20; }
   nav a {
     font-size: 1rem;
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
@@ -192,23 +196,26 @@ nav {
     text-transform: uppercase;
     color: #f0efed;
     padding: 20px; }
+  nav .dropdown {
+    color: #f8e71c;
+    font-size: 2rem;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    position: absolute;
+    top: 20;
+    right: 20; }
 
-.dropdown {
-  color: #f8e71c;
-  font-size: 2rem;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end; }
+nav {
+  padding: 30px 15px; }
 
 nav:hover ul,
 nav:focus-within ul {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap; }
+  display: flex; }
   nav:hover ul li,
   nav:focus-within ul li {
     background-color: #4f4f4f;
@@ -220,10 +227,12 @@ h1 {
   font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: white;
+  text-align: center;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
-  position: absolute; }
+  position: absolute;
+  top: 25vh; }
   h1 span {
     color: #f8e71c; }
 
@@ -377,7 +386,8 @@ section p {
 
 .galleryPhoto2,
 .galleryPhoto3 {
-  width: calc(98% / 2); }
+  width: calc(98% / 2);
+  margin: 20px auto; }
 
 footer {
   background-color: #4f4f4f;
@@ -388,3 +398,5 @@ footer {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-weight: normal;
   text-align: center; }
+  footer p {
+    margin: 0; }

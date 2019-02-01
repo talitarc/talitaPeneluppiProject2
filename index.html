@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
     crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700|Roboto:400,700" rel="stylesheet"> 
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
@@ -21,28 +21,31 @@
                     <a href="/index.html">Home</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="#about">About</a>
                 </li>
                 <li>
-                    <a href="/blog.html">Blog</a>
+                    <a href="blog.html">Blog</a>
                 </li>
                 <li>
-                    <a href="/contact.html">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
             </ul>
-            <input type="checkbox" name="menu" id="menu">
-            <label for="menu"><i class="fas fa-chevron-circle-down mobileOnly dropDown"></i></label>
+            
+            <div class="containerMenu">
+                <i class="fas fa-chevron-circle-down mobileOnly dropDown"></i>
+            </div>
+            
         </nav>
         <h1>Plant <span>invitation</span></h1>
 
         <!-- Sugestion: this img only appears on desktop -->
-        <img class="desktopOnly" src="/images/headerHomeImg.jpg" alt="Plant with very dark green leaves.">
+        <img class="desktopOnly" src="images/headerHomeImg.jpg" alt="Plant with very dark green leaves.">
     </header>
 
 <!-- Main with explanation about the business -->
-    <main>
+    <main id="about">
         <div class="wrapper">
-            <h3>What is Planted?</h3>
+            <h3> What is Planted?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eaque numquam voluptatum nulla, nesciunt ratione obcaecati dolorem corrupti facilis eius asperiores qui a. Doloremque laboriosam fugit dolorem maxime. Ipsum incidunt corrupti totam vitae, nihil, sed praesentium architecto eius dolorum, quasi recusandae quos itaque eligendi consequuntur.</p>
             <button class="btnFindOut">
                 <a href="#">Find Out More</a>
@@ -55,7 +58,7 @@
     <section class="sectionEvents">
         <div>
             <div>
-                <img class="photoArticle" src="/images/flowersSection1.jpg" alt="Bouquet with flowers in many tones of pink and dark green leaves.">
+                <img class="photoArticle" src="images/flowersSection1.jpg" alt="Bouquet with flowers in many tones of pink and dark green leaves.">
             </div>
             <div class="wrapper">
                 <h3>Unique plants do discover</h3>
@@ -69,7 +72,7 @@
 
         <div>
             <div>
-                <img class="photoArticle" src="/images/plantsSection1.jpg" alt="Plant with green leaves in bouquet shape.">
+                <img class="photoArticle" src="images/plantsSection1.jpg" alt="Plant with green leaves in bouquet shape.">
             </div>
             <div class="wrapper">
                 <h3>Upcoming workshops</h3>
@@ -120,10 +123,10 @@
             </ul>
         </div>
         <div>
-            <img class ="bannerSection" src="/images/bannerSection2.jpg" alt="Two white vases with white flowers and green leaves in a white window with a white jar between them.">
+            <img class ="bannerSection" src="images/bannerSection2.jpg" alt="Two white vases with white flowers and green leaves in a white window with a white jar between them.">
         </div>
         <div class="wrapper sectionFounder">
-            <img src="/images/founder.jpg" alt="Planted's founder standing in a garden.">
+            <img src="images/founder.jpg" alt="Planted's founder standing in a garden.">
 
             <div class="contentFounder">
                 <h3>Planted's founder</h3>
@@ -138,9 +141,9 @@
 <!-- Section with gallery only for layout purpose (not content) -->
     <section class="wrapper">
         <!-- Mobile recommendation: only two images -->
-        <img class="desktopOnly galleryPhoto1" src="/images/gallery1.jpg" alt="Inside a green house with many green plants in vases.">
-        <img class="galleryPhoto2" src="/images/gallery2.jpg" alt="Tiny vases with cacti and succulents plants in a white table from a top perspective.">
-        <img class="galleryPhoto3" src="/images/gallery3.jpg" alt="Vases with cacti and succulents.">
+        <img class="desktopOnly galleryPhoto1" src="images/gallery1.jpg" alt="Inside a green house with many green plants in vases.">
+        <img class="galleryPhoto2" src="images/gallery2.jpg" alt="Tiny vases with cacti and succulents plants in a white table from a top perspective.">
+        <img class="galleryPhoto3" src="images/gallery3.jpg" alt="Vases with cacti and succulents.">
     </section>
 
 <!-- Footer'll only display copyright information -->
