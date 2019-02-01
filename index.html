@@ -39,7 +39,10 @@
         <h1>Plant <span>invitation</span></h1>
 
         <!-- Sugestion: this img only appears on desktop -->
-        <img class="desktopOnly" src="images/headerHomeImg.jpg" alt="Plant with very dark green leaves.">
+        <div class="desktopOnly">  
+            <img src="images/headerHomeImg.jpg" alt="Plant with very dark green leaves.">
+        </div>
+        
     </header>
 
 <!-- Main with explanation about the business -->
@@ -56,8 +59,8 @@
 
 <!-- First section with calls for two articles (plants do discover and next events) -->
     <section class="sectionEvents">
-        <div>
-            <div>
+        <div class="firstPost">
+            <div class="photoContainer">
                 <img class="photoArticle" src="images/flowersSection1.jpg" alt="Bouquet with flowers in many tones of pink and dark green leaves.">
             </div>
             <div class="wrapper">
@@ -70,8 +73,8 @@
             
         </div>
 
-        <div>
-            <div>
+        <div class="secondPost">
+            <div class="photoContainer">
                 <img class="photoArticle" src="images/plantsSection1.jpg" alt="Plant with green leaves in bouquet shape.">
             </div>
             <div class="wrapper">
@@ -126,7 +129,10 @@
             <img class ="bannerSection" src="images/bannerSection2.jpg" alt="Two white vases with white flowers and green leaves in a white window with a white jar between them.">
         </div>
         <div class="wrapper sectionFounder">
-            <img src="images/founder.jpg" alt="Planted's founder standing in a garden.">
+            <div class="photoContainer">
+                <img src="images/founder.jpg"alt="Planted's founder standing in agarden.">
+            </div>
+            
 
             <div class="contentFounder">
                 <h3>Planted's founder</h3>
@@ -139,11 +145,20 @@
         </div>
     </section>
 <!-- Section with gallery only for layout purpose (not content) -->
-    <section class="wrapper">
+    <section class="wrapper gallerySection">
         <!-- Mobile recommendation: only two images -->
-        <img class="desktopOnly galleryPhoto1" src="images/gallery1.jpg" alt="Inside a green house with many green plants in vases.">
-        <img class="galleryPhoto2" src="images/gallery2.jpg" alt="Tiny vases with cacti and succulents plants in a white table from a top perspective.">
-        <img class="galleryPhoto3" src="images/gallery3.jpg" alt="Vases with cacti and succulents.">
+        <div class="desktopOnly gallery">
+            <img class="galleryPhoto1" src="images/gallery1.jpg" alt="Inside a green house with many green plants in vases.">
+        </div>
+        
+        <div class="gallery">
+            <img class="galleryPhoto2" src="images/gallery2.jpg" alt="Tiny vases with cacti and succulents plants in a white table from a top perspective.">
+        </div>
+        
+        <div class="gallery">
+            <img class="galleryPhoto3" src="images/gallery3.jpg" alt="Vases with cacti and succulents.">
+        </div>
+        
     </section>
 
 <!-- Footer'll only display copyright information -->
