@@ -23,7 +23,7 @@ $commentDataColor: #074115;
     font-weight: bold;
 }
 
-// // Founder heading - FAtima changed to Josefin Sans
+// // Founder heading - Fatima changed to Josefin Sans
 // @mixin founderHeading($sizeValue, $letterSpacing) {
 //     font-size: $sizeValue;
 //     letter-spacing: $letterSpacing;
@@ -48,7 +48,7 @@ $commentDataColor: #074115;
 
 // Font-size default
 
-body {
+html {
     font-size: 125%;
 }
 
@@ -61,6 +61,7 @@ body {
 // Wrapper size and position
 .wrapper {
     width: 80%;
+    max-width: 1048px;
     margin: 0 auto;
 }
 
