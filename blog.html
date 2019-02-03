@@ -1,12 +1,133 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"content="ie=edge">
+    <title>Planted</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+    crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700|Roboto:400,700" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <header class="headerBlog">
+        <nav class="wrapper">
+            <h1 class="desktopOnly navLogo">Planted</h1>
+            
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="index.html#about">About</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="containerMenu mobileOnly">
+                <i class="fas fa-chevron-circle-down dropDown"></i>
+            </div>
+            
+        </nav>
+        <h1 class="wrapper mainTitle"><span>blog</span></h1>
+
+        <!-- Sugestion: this img only appears on desktop -->
     
+    </header>
+
+    <main class="mainBlog">
+
+       
+            <div class="photoContainer">  
+                <img src="images/blogPost.jpg"alt="Orchid bud.">
+            </div>
+            <!-- BLOG POST INSIDE WRAPPER -->
+        <div class="wrapper">
+            <div class="blogPost">
+               <h3>Our mission at Planet</h3>
+               <p class="dateSign">Monday January 21th, 2019 by <span>Yousra</span></p>
+
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos, quia non! Minus fuga magni ipsam atque facere nemo et rem dolore quibusdam, eos voluptate velit omnis porro voluptas assumenda fugit.</p>
+               
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus molestiae unde illo fugit distinctio tempore repellat ab dolorum vero quis culpa obcaecati, incidunt doloribus deserunt explicabo architecto aliquid a est cumque eveniet exercitationem aut, nostrum veniam dolore! Quo, perspiciatis quae.</p>
+               
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, ut cupiditate nostrum modi obcaecati at omnis sint odit neque nihil temporibus, corrupti dolore rerum ea pariatur veritatis eum eaque. Cumque quisquam labore voluptas deserunt error blanditiis facere, non tempora, explicabo dolores laborum amet adipisci consequatur ex. Et, reprehenderit! Voluptatibus et quam vitae labore rem quibusdam ex. Vero, quod officiis inventore corrupti ex voluptates suscipit placeat dolorum reprehenderit recusandae velit ipsa, alias eveniet sequi impedit illo laudantium a tempore. Neque eius quam ullam quibusdam aliquid quo quod error dolorum sint autem.</p>
+               
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis totam omnis voluptatibus in eaque provident nesciunt adipisci veritatis ab nisi! Suscipit quasi deserunt quam officiis.</p>
+            </div>
+            
+            <!-- COMMENT SECTION STARTS HERE -->
+            <div class="commentsSection">
+                    <div>
+                        <h4>Comments:</h4>
+                    </div>
+                <div class="publicComment">
+            
+                    <div class="profileContainer">
+                        <img src="/images/blogReader1.jpg" alt="Profile photo of the reader Jeremy, who left a comment on the blog post.">                        
+                    </div>
+                    <div class="singleComment">
+                        <h4>Tuesday October 9th, 2018 by Jeremy</h4>
+            
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi officiis voluptates sequi ipsum enim eaque ducimus reprehenderit facilis aliquid quia nemo aut, explicabo culpa adipisci!</p>
+                    </div>
+                </div>
+                
+                <div class="publicComment">
+                    <div class="profileContainer">
+                        <img src="/images/blogReader2.jpg" alt="Profile photo of the reader Julia, who left a comment on the blog post.">
+                    </div>
+                    <div class="singleComment">
+                        <h4>Wednesday October 10th, 2018 by Julia</h4>
+                
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci tempore, exercitationem saepe, quibusdam temporibus accusantium excepturi fugit facere, ipsam dignissimos consequatur corrupti iure hic earum?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM TO POST A NEW COMMENT STARTS HERE -->
+                    
+            <form action="comment" class="commentForm">
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="email" name="email" id="email" placeholder="Email address">
+                
+                <textarea name="comment" id="comment" cols="30" rows="10">Comment</textarea>
+    
+                <input type="submit" value="Post Comment">
+                
+            </form>
+        </div>
+
+        
+    </main>
+
+    <aside>
+        <img src="/images/blogAbout.jpg" alt="Vintage window in an old wall.">
+
+        <div>
+            <div>
+                <h4>About Planted</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae facilis exercitationem dolorum! <a href="index.html#about">Find out more.</a></p>
+            </div>
+            <div>
+                <h4>Recent Posts</h4>
+                <ul>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <p>Copyright &copy; 2018 HackerYou</p>
+    </footer>
 </body>
 </html>

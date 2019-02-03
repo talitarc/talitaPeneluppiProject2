@@ -329,6 +329,7 @@ h1 span {
   }
   header {
     height: 50vh;
+    position: relative;
   }
   header .wrapper {
     margin: 3% auto;
@@ -384,10 +385,13 @@ h1 span {
     font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
     font-weight: normal;
     left: unset;
+    z-index: 5;
     margin: 20% 5% 10% 25%;
   }
   header div.desktopOnly {
-    margin-top: 10%;
+    position: absolute;
+    margin-top: 0;
+    top: 9em;
   }
 }
 
@@ -805,5 +809,151 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+header.headerBlog {
+  background-image: url(../../../images/blogHeader.jpg);
+  height: 40vh;
+}
+
+header.headerBlog .wrapper {
+  margin: 0 auto;
+}
+
+main.mainBlog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.mainBlog .wrapper {
+  padding: 0;
+}
+
+main.mainBlog .photoContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 90%;
+  margin-top: -1.5em;
+}
+
+main.mainBlog .photoContainer img {
+  width: 100%;
+  -webkit-box-shadow: -5px 5px #f8e71c;
+          box-shadow: -5px 5px #f8e71c;
+}
+
+main.mainBlog .blogPost {
+  padding: 10px 0 10px 10px;
+  margin-left: -4px;
+  border-bottom: 2px solid #f8e71c;
+  border-left: 2px solid #f8e71c;
+}
+
+main.mainBlog h3 {
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+main.mainBlog .dateSign {
+  font-size: 0.6rem;
+  line-height: 1rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: italic;
+}
+
+main.mainBlog .dateSign span {
+  font-weight: bold;
+}
+
+main.mainBlog p {
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-align: left;
+}
+
+main.mainBlog .publicComment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-bottom: 1em;
+}
+
+main.mainBlog .publicComment .profileContainer {
+  width: 100%;
+}
+
+main.mainBlog .publicComment .profileContainer img {
+  max-width: 100%;
+}
+
+main.mainBlog .publicComment .singleComment {
+  margin-left: 1em;
+}
+
+main.mainBlog .publicComment h4 {
+  font-size: 0.7rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+main.mainBlog .publicComment p {
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+main.mainBlog .commentForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.mainBlog .commentForm input,
+main.mainBlog .commentForm textarea {
+  border: none;
+  border-bottom: 2px solid #0e902d;
+  background-color: #f0efed;
+  margin: 1em;
+}
+
+main.mainBlog .commentForm input[type="text"],
+main.mainBlog .commentForm input[type="email"] {
+  height: 2em;
+}
+
+main.mainBlog .commentForm textarea {
+  border: 2px solid #0e902d;
+  color: #3c3c3c;
 }
 /*# sourceMappingURL=style.css.map */
