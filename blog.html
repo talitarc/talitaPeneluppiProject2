@@ -9,28 +9,30 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700|Roboto:400,700" rel="stylesheet"> 
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <header class="headerBlog">
-        <nav class="wrapper">
-            <h1 class="desktopOnly navLogo">Planted</h1>
+<body class="gridContainer">
+    <header class="headerBlog gridHeader">
+        <nav>
+            <div class="wrapper">
+                <h1 class="desktopOnly navLogo">Planted</h1>
             
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="index.html#about">About</a>
-                </li>
-                <li>
-                    <a href="blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-            
-            <div class="containerMenu mobileOnly">
-                <i class="fas fa-chevron-circle-down dropDown"></i>
+                    <ul>
+                        <li>
+                            <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <div class="containerMenu mobileOnly">
+                    <i class="fas fa-chevron-circle-down dropDown"></i>
+                </div>
             </div>
             
         </nav>
@@ -40,7 +42,7 @@
     
     </header>
 
-    <main class="mainBlog">
+    <main class="mainBlog gridMain">
 
        
             <div class="photoContainer">  
@@ -107,7 +109,7 @@
     </main>
 
     <!-- ASIDE WITH ABOUT INFO AND LAST POSTS -->
-    <aside>
+    <aside class="gridAside">
         <div class="photoContainer">
             <img src="/images/blogAbout.jpg" alt="Vintage window in an old wall.">
         </div>
@@ -130,7 +132,7 @@
         </div>
     </aside>
 
-    <footer>
+    <footer class="gridFooter">
         <p>Copyright &copy; 2018 HackerYou</p>
     </footer>
 </body>

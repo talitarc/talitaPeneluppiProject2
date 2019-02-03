@@ -207,8 +207,13 @@ header {
           flex: 1 1 auto;
 }
 
-header .wrapper {
+header div.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 10% auto;
+  width: 80%;
+  max-width: 1048px;
 }
 
 nav {
@@ -221,7 +226,7 @@ nav {
   -ms-flex-item-align: start;
       align-self: flex-start;
   position: relative;
-  margin: 5%;
+  width: 100%;
 }
 
 nav ul {
@@ -298,7 +303,7 @@ h1 span {
   header {
     height: 40vh;
   }
-  header .wrapper {
+  header div.wrapper {
     margin: 5% auto;
   }
   header h1 {
@@ -331,7 +336,7 @@ h1 span {
     height: 50vh;
     position: relative;
   }
-  header .wrapper {
+  header div.wrapper {
     margin: 3% auto;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -825,12 +830,18 @@ header.headerBlog .wrapper {
 }
 
 @media (min-width: 768px) {
-  header.headerblog .wrapper {
-    margin: 3% auto;
+  header.headerblog div.wrapper {
+    margin: 2% auto;
   }
   header.headerblog .mainTitle {
     margin-top: 25%;
     margin-left: 4%;
+  }
+}
+
+@media (min-width: 992px) {
+  header.headerBlog nav {
+    background-color: black;
   }
 }
 
@@ -1023,6 +1034,19 @@ main.mainBlog .commentForm input[type="submit"]:focus-within {
   }
 }
 
+@media (min-width: 992px) {
+  main.mainBlog .photoContainer {
+    margin-top: -20%;
+    z-index: 5;
+  }
+  main.mainBlog .blogPost {
+    padding-left: 6%;
+  }
+  main.mainBlog h3 {
+    text-align: left;
+  }
+}
+
 aside {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1110,6 +1134,57 @@ aside li::before {
   aside ul {
     padding-left: 8%;
     margin: 1% 0;
+  }
+}
+
+@media (min-width: 992px) {
+  aside {
+    display: inline-block;
+  }
+  aside .wrapper {
+    max-height: 60vh;
+    width: 72%;
+    margin-top: -85%;
+    margin-left: 30%;
+    padding: 85% 5%;
+  }
+  aside .photoContainer {
+    max-height: 30vh;
+    width: 100%;
+  }
+  aside .photoContainer {
+    margin-top: 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  .gridContainer {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 0;
+  }
+  .gridHeader {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 12;
+  }
+  .gridMain {
+    -ms-grid-column: 7;
+        grid-column-start: 7;
+    grid-column-end: 12;
+  }
+  .gridAside {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 7;
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .gridFooter {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 12;
   }
 }
 /*# sourceMappingURL=style.css.map */
