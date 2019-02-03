@@ -435,6 +435,10 @@ main p {
 
 button {
   background: #0e902d;
+  font-size: 1rem;
+  letter-spacing: 0rem;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
   border: none;
   margin: 20px;
 }
@@ -820,6 +824,16 @@ header.headerBlog .wrapper {
   margin: 0 auto;
 }
 
+@media (min-width: 768px) {
+  header.headerblog .wrapper {
+    margin: 3% auto;
+  }
+  header.headerblog .mainTitle {
+    margin-top: 25%;
+    margin-left: 4%;
+  }
+}
+
 main.mainBlog {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -903,7 +917,10 @@ main.mainBlog .publicComment {
 }
 
 main.mainBlog .publicComment .profileContainer {
-  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  text-align: center;
 }
 
 main.mainBlog .publicComment .profileContainer img {
@@ -912,6 +929,9 @@ main.mainBlog .publicComment .profileContainer img {
 
 main.mainBlog .publicComment .singleComment {
   margin-left: 1em;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 auto 100%;
+          flex: 3 auto 100%;
 }
 
 main.mainBlog .publicComment h4 {
@@ -919,6 +939,8 @@ main.mainBlog .publicComment h4 {
   letter-spacing: 0.1rem;
   font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
   font-weight: bold;
+  line-height: 1rem;
+  color: #074115;
   margin: 0;
 }
 
@@ -937,6 +959,9 @@ main.mainBlog .commentForm {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 main.mainBlog .commentForm input,
@@ -944,7 +969,7 @@ main.mainBlog .commentForm textarea {
   border: none;
   border-bottom: 2px solid #0e902d;
   background-color: #f0efed;
-  margin: 1em;
+  margin: 1em 0em;
 }
 
 main.mainBlog .commentForm input[type="text"],
@@ -954,6 +979,137 @@ main.mainBlog .commentForm input[type="email"] {
 
 main.mainBlog .commentForm textarea {
   border: 2px solid #0e902d;
-  color: #3c3c3c;
+  padding-top: 30px;
+  padding-left: 15px;
+}
+
+main.mainBlog .commentForm input[type="text"],
+main.mainBlog .commentForm input[type="email"] {
+  padding: 25px 0 25px 15px;
+}
+
+main.mainBlog .commentForm input[type="submit"] {
+  border: 2px solid #0e902d;
+  background-color: #0e902d;
+  font-size: 1rem;
+  letter-spacing: 0rem;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+  height: 50px;
+  width: 100%;
+}
+
+main.mainBlog .commentForm input[type="text"]:hover,
+main.mainBlog .commentForm input[type="text"]:focus-within,
+main.mainBlog .commentForm input[type="email"]:hover,
+main.mainBlog .commentForm input[type="email"]:focus-within,
+main.mainBlog .commentForm textarea:hover,
+main.mainBlog .commentForm textarea:focus-within {
+  background-color: #f8e71c;
+  opacity: 0.6;
+}
+
+main.mainBlog .commentForm input[type="submit"]:hover,
+main.mainBlog .commentForm input[type="submit"]:focus-within {
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  main.mainBlog .publicComment .profileContainer {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+  }
+}
+
+aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f0efed;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-bottom: 5%;
+}
+
+aside .wrapper {
+  width: 70%;
+  background-color: #fff;
+  margin-top: -65%;
+  padding: 65% 2% 2% 2%;
+}
+
+aside .photoContainer {
+  width: 80%;
+  z-index: 5;
+}
+
+aside .photoContainer img {
+  width: 100%;
+  max-width: 100%;
+}
+
+aside h4 {
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+aside p,
+aside li {
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+aside p a,
+aside li a {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
+  color: #074115;
+}
+
+aside li::before {
+  content: "\2022";
+  color: #0e902d;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+@media (min-width: 768px) {
+  aside {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  aside .wrapper {
+    width: 100%;
+    margin-top: -5%;
+    margin-left: -40%;
+    padding: 2% 2% 2% 45%;
+  }
+  aside .photoContainer {
+    width: 35%;
+  }
+  aside h4 {
+    margin-bottom: 2%;
+  }
+  aside ul {
+    padding-left: 8%;
+    margin: 1% 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
