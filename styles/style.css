@@ -821,7 +821,7 @@ footer p {
 
 header.headerSecondary {
   background-image: url("./../../images/blogHeader.jpg");
-  height: 40vh;
+  height: 50vh;
 }
 
 @media (min-width: 768px) {
