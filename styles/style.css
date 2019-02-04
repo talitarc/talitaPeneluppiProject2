@@ -330,7 +330,7 @@ h1 span {
     display: none;
   }
   header {
-    height: 50vh;
+    height: 70vh;
     position: relative;
   }
   header div.wrapper {
@@ -820,7 +820,7 @@ footer p {
 }
 
 header.headerSecondary {
-  background-image: url("../../../images/blogHeader.jpg");
+  background-image: url("./../../images/blogHeader.jpg");
   height: 40vh;
 }
 
@@ -1197,7 +1197,7 @@ aside li::before {
 }
 
 header.headerContact {
-  background-image: url("../../../images/contactHeader.jpg");
+  background-image: url("./../../images/contactHeader.jpg");
 }
 
 header.headerContact .mainTitle {
