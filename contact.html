@@ -9,30 +9,31 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700|Roboto:400,700" rel="stylesheet"> 
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <header>
-        <nav class="wrapper">
-            <h1 class="desktopOnly navLogo">Planted</h1>
+<body class="gridContainer">
+    <header class="headerSecondary headerContact gridHeader">
+        <nav>
+            <div class="wrapper">
+                <h1 class="desktopOnly navLogo">Planted</h1>
             
-            <ul>
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="index.html#about">About</a>
-                </li>
-                <li>
-                    <a href="blog.html">Blog</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-            
-            <div class="containerMenu mobileOnly">
-                <i class="fas fa-chevron-circle-down dropDown"></i>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="index.html#about">About</a>
+                    </li>
+                    <li>
+                        <a href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                    
+                <div class="containerMenu mobileOnly">
+                    <i class="fas fa-chevron-circle-down dropDown"></i>
+                </div>
             </div>
-            
         </nav>
         <h1 class="wrapper mainTitle"><span>Get in Touch</span></h1>
 
@@ -40,46 +41,46 @@
     
     </header>
 
-    <main>
-        <div class="photoContainer">  
-            <div>
-                <form action="contact">
-                    <div>
-                        <input type="text" name="name" id="nome" placeholder="Name">
-                        <input type="email" name="email" id="email" placeholder="Email addess">
-                    </div>
-                    
-                    <div>
-                        <textarea name="message" id="message" cols="30" rows="10">Message</textarea>
+    <main class="mainSecondary mainContact gridMain">
+        <div class="wrapper">
+            <form action="contact" class="basicForm contactForm">
     
-                        <input type="submit" value="Submit">
-                    </div>
-                </form>
-            </div>
-        </div>
+                <input type="text" name="name" id="nome" placeholder="Name">
+                <input type="email" name="email" id="email" placeholder="Email addess">
+                
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>  
         
     </main>
 
-    <aside>
-        <ul>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
-        </ul>
-
-        <div>
-            <p>info@email.com</p>
+    <aside class="asideContact gridAside">
+        <div class="wrapper">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
+            
+            <div class="contactBlock">
+                <div class="email">
+                    <p>info@email.com</p>
+                </div>
+                <div class="address">
+                    <p>123-456-7890</p>
+                    <p>123 Queen Street West, Unit 10</p>
+                    <p>Toronto, Ontario</p>
+                    <p>M5V2D5</p>
+                </div>
+            </div>
         </div>
-        <div>
-            <p>123-456-7890</p>
-            <p>123 Queen Street West, Unit 10</p>
-            <p>Toronto, Ontario</p>
-            <p>M5V2D5</p>
-        </div>
+        
     </aside>
 
-    <footer>
+    <footer class="gridFooter">
         <p>Copyright &copy; 2018 HackerYou</p>
     </footer>
 </body>

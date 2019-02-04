@@ -175,7 +175,7 @@ html {
 
 .wrapper {
   width: 80%;
-  max-width: 1048px;
+  max-width: 1024px;
   margin: 0 auto;
 }
 
@@ -227,6 +227,7 @@ nav {
       align-self: flex-start;
   position: relative;
   width: 100%;
+  padding: 30px 15px;
 }
 
 nav ul {
@@ -261,10 +262,6 @@ nav .dropdown {
   position: absolute;
   top: 20;
   right: 20;
-}
-
-nav {
-  padding: 30px 15px;
 }
 
 nav:hover ul,
@@ -347,14 +344,13 @@ h1 span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0;
-    padding: 0;
+    height: 0;
   }
   header nav:hover ul li,
   header nav:focus-within ul li {
     background-color: initial;
     border: none;
-    line-height: 3rem;
+    height: 0;
   }
   header h1.desktopOnly,
   header ul {
@@ -397,6 +393,9 @@ h1 span {
     position: absolute;
     margin-top: 0;
     top: 9em;
+  }
+  header.headerHome nav div ul li a[href*="index"] {
+    color: #f8e71c;
   }
 }
 
@@ -820,32 +819,36 @@ footer p {
   margin: 0;
 }
 
-header.headerBlog {
-  background-image: url(../../../images/blogHeader.jpg);
+header.headerSecondary {
+  background-image: url("../../../images/blogHeader.jpg");
   height: 40vh;
 }
 
-header.headerBlog .wrapper {
-  margin: 0 auto;
-}
-
 @media (min-width: 768px) {
-  header.headerblog div.wrapper {
+  header.headerSecondary div.wrapper {
     margin: 2% auto;
   }
-  header.headerblog .mainTitle {
-    margin-top: 25%;
-    margin-left: 4%;
+  header.headerSecondary .mainTitle {
+    top: 22vh;
+    left: 6vh;
   }
 }
 
 @media (min-width: 992px) {
-  header.headerBlog nav {
+  header.headerSecondary nav {
     background-color: black;
+  }
+  header.headerBlog nav div ul li a[href*="blog"] {
+    color: #f8e71c;
+  }
+  header.headerBlog .mainTitle {
+    top: 0;
+    left: 0;
+    margin: 25% 10%;
   }
 }
 
-main.mainBlog {
+main.mainSecondary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -855,11 +858,11 @@ main.mainBlog {
           flex-direction: column;
 }
 
-main.mainBlog .wrapper {
+main.mainSecondary .wrapper {
   padding: 0;
 }
 
-main.mainBlog .photoContainer {
+main.mainSecondary .photoContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -873,27 +876,28 @@ main.mainBlog .photoContainer {
   margin-top: -1.5em;
 }
 
-main.mainBlog .photoContainer img {
+main.mainSecondary .photoContainer img {
   width: 100%;
   -webkit-box-shadow: -5px 5px #f8e71c;
           box-shadow: -5px 5px #f8e71c;
 }
 
-main.mainBlog .blogPost {
+main.mainSecondary .blogPost {
   padding: 10px 0 10px 10px;
   margin-left: -4px;
   border-bottom: 2px solid #f8e71c;
   border-left: 2px solid #f8e71c;
 }
 
-main.mainBlog h3 {
+main.mainSecondary h3 {
   font-size: 1.1rem;
   letter-spacing: 0.1rem;
   font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
   font-weight: bold;
+  text-align: left;
 }
 
-main.mainBlog .dateSign {
+main.mainSecondary .dateSign {
   font-size: 0.6rem;
   line-height: 1rem;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
@@ -901,11 +905,11 @@ main.mainBlog .dateSign {
   font-style: italic;
 }
 
-main.mainBlog .dateSign span {
+main.mainSecondary .dateSign span {
   font-weight: bold;
 }
 
-main.mainBlog p {
+main.mainSecondary p {
   font-size: 0.8rem;
   line-height: 1.2rem;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
@@ -913,7 +917,7 @@ main.mainBlog p {
   text-align: left;
 }
 
-main.mainBlog .publicComment {
+main.mainSecondary .publicComment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -927,25 +931,25 @@ main.mainBlog .publicComment {
   margin-bottom: 1em;
 }
 
-main.mainBlog .publicComment .profileContainer {
+main.mainSecondary .publicComment .profileContainer {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;
           flex: 0 0 40%;
   text-align: center;
 }
 
-main.mainBlog .publicComment .profileContainer img {
+main.mainSecondary .publicComment .profileContainer img {
   max-width: 100%;
 }
 
-main.mainBlog .publicComment .singleComment {
+main.mainSecondary .publicComment .singleComment {
   margin-left: 1em;
   -webkit-box-flex: 3;
       -ms-flex: 3 auto 100%;
           flex: 3 auto 100%;
 }
 
-main.mainBlog .publicComment h4 {
+main.mainSecondary .publicComment h4 {
   font-size: 0.7rem;
   letter-spacing: 0.1rem;
   font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
@@ -955,14 +959,14 @@ main.mainBlog .publicComment h4 {
   margin: 0;
 }
 
-main.mainBlog .publicComment p {
+main.mainSecondary .publicComment p {
   font-size: 0.7rem;
   line-height: 1.2rem;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
 
-main.mainBlog .commentForm {
+main.mainSecondary .basicForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -973,33 +977,37 @@ main.mainBlog .commentForm {
   width: 100%;
   margin: 0;
   padding: 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  font-weight: lighter;
 }
 
-main.mainBlog .commentForm input,
-main.mainBlog .commentForm textarea {
+main.mainSecondary .basicForm input,
+main.mainSecondary .basicForm textarea {
   border: none;
   border-bottom: 2px solid #0e902d;
   background-color: #f0efed;
   margin: 1em 0em;
 }
 
-main.mainBlog .commentForm input[type="text"],
-main.mainBlog .commentForm input[type="email"] {
+main.mainSecondary .basicForm input[type="text"],
+main.mainSecondary .basicForm input[type="email"] {
   height: 2em;
 }
 
-main.mainBlog .commentForm textarea {
+main.mainSecondary .basicForm textarea {
   border: 2px solid #0e902d;
   padding-top: 30px;
   padding-left: 15px;
 }
 
-main.mainBlog .commentForm input[type="text"],
-main.mainBlog .commentForm input[type="email"] {
+main.mainSecondary .basicForm input[type="text"],
+main.mainSecondary .basicForm input[type="email"] {
   padding: 25px 0 25px 15px;
 }
 
-main.mainBlog .commentForm input[type="submit"] {
+main.mainSecondary .basicForm input[type="submit"] {
   border: 2px solid #0e902d;
   background-color: #0e902d;
   font-size: 1rem;
@@ -1011,23 +1019,23 @@ main.mainBlog .commentForm input[type="submit"] {
   width: 100%;
 }
 
-main.mainBlog .commentForm input[type="text"]:hover,
-main.mainBlog .commentForm input[type="text"]:focus-within,
-main.mainBlog .commentForm input[type="email"]:hover,
-main.mainBlog .commentForm input[type="email"]:focus-within,
-main.mainBlog .commentForm textarea:hover,
-main.mainBlog .commentForm textarea:focus-within {
+main.mainSecondary .basicForm input[type="text"]:hover,
+main.mainSecondary .basicForm input[type="text"]:focus-within,
+main.mainSecondary .basicForm input[type="email"]:hover,
+main.mainSecondary .basicForm input[type="email"]:focus-within,
+main.mainSecondary .basicForm textarea:hover,
+main.mainSecondary .basicForm textarea:focus-within {
   background-color: #f8e71c;
   opacity: 0.6;
 }
 
-main.mainBlog .commentForm input[type="submit"]:hover,
-main.mainBlog .commentForm input[type="submit"]:focus-within {
+main.mainSecondary .basicForm input[type="submit"]:hover,
+main.mainSecondary .basicForm input[type="submit"]:focus-within {
   opacity: 0.5;
 }
 
 @media (min-width: 768px) {
-  main.mainBlog .publicComment .profileContainer {
+  main.mainSecondary .publicComment .profileContainer {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 20%;
             flex: 0 0 20%;
@@ -1035,14 +1043,14 @@ main.mainBlog .commentForm input[type="submit"]:focus-within {
 }
 
 @media (min-width: 992px) {
-  main.mainBlog .photoContainer {
-    margin-top: -20%;
+  main.mainSecondary .photoContainer {
+    margin-top: 0;
     z-index: 5;
   }
-  main.mainBlog .blogPost {
+  main.mainSecondary .blogPost {
     padding-left: 6%;
   }
-  main.mainBlog h3 {
+  main.mainSecondary h3 {
     text-align: left;
   }
 }
@@ -1185,6 +1193,155 @@ aside li::before {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 12;
+  }
+}
+
+header.headerContact {
+  background-image: url("../../../images/contactHeader.jpg");
+}
+
+header.headerContact .mainTitle {
+  left: 5vh;
+  top: 15vh;
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  header.headerContact nav div ul li a[href*="contact"] {
+    color: #f8e71c;
+  }
+  header.headerContact .mainTitle {
+    top: 12vh;
+    font-size: 5rem;
+    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+  }
+}
+
+@media (min-width: 992px) {
+  header.headerContact .mainTitle {
+    top: 0;
+    left: 0;
+    margin: 15% 10%;
+  }
+}
+
+main.mainSecondary .contactForm input,
+main.mainSecondary .contactForm textarea {
+  background-color: #fff;
+}
+
+main.mainContact .basicForm {
+  -webkit-box-shadow: -5px 5px #f8e71c;
+          box-shadow: -5px 5px #f8e71c;
+  background-color: #fff;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+@media (min-width: 768px) {
+  main.mainSecondary {
+    margin-top: -5%;
+  }
+  main.mainContact .basicForm {
+    z-index: 5;
+  }
+}
+
+@media (min-width: 992px) {
+  main.mainSecondary {
+    margin-top: -25%;
+  }
+}
+
+aside.asideContact .email p {
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+aside.asideContact .address p {
+  font-size: 0.7rem;
+  line-height: 0.8rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+
+aside.asideContact .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin: 0 auto;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f0efed;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+aside.asideContact ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+  margin: 0 10%;
+  padding: 0;
+}
+
+aside.asideContact ul li {
+  padding: 5%;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+aside.asideContact ul li a {
+  color: #0e902d;
+}
+
+aside.asideContact ul li::before {
+  content: "";
+}
+
+aside.asideContact ul li:hover,
+aside.asideContact ul li:focus-within {
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  aside.asideContact li {
+    font-size: 1.5rem;
+  }
+  aside.asideContact li:hover,
+  aside.asideContact li:focus-within {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  aside.asideContact .wrapper {
+    margin-top: 20%;
   }
 }
 /*# sourceMappingURL=style.css.map */
