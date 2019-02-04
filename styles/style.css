@@ -820,7 +820,7 @@ footer p {
 }
 
 header.headerSecondary {
-  background-image: url("./../../images/blogHeader.jpg");
+  background-image: url("../../../images/blogHeader.jpg");
   height: 50vh;
 }
 
