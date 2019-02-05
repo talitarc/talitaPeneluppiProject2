@@ -4,7 +4,7 @@ section {
 
     .photoContainer {
         img {
-            width: 100%;
+            max-width: 100%;
             box-shadow: 5px 5px $shadowColor;
         }
         
@@ -274,6 +274,14 @@ section {
             }
         }
 
+        .photoContainer {
+            width: 85%;
+
+            img {
+                box-shadow: 10px 10px $shadowColor;
+            }
+        }
+
         .secondPost {
             flex-direction: column-reverse;
             position: unset;
@@ -294,11 +302,7 @@ section {
 
         }
 
-        .photoContainer {
-            width: 85%;
-
-            box-shadow: 10px 10px $shadowColor;
-        }
+        
 
         .sectionFounder .contentFounder {
             padding-left: 50px;
@@ -328,6 +332,20 @@ section {
         }
 
 }
+
+// BIGGER SCREENS ADJUSTS
+
+@media (min-width: 1200px) {
+    section {
+        .sectionFounder {
+            .contentFounder {
+                padding-top: 2%;
+            }
+        }
+    }
+}
+
+
     
     
 

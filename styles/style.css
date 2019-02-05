@@ -507,7 +507,7 @@ button:focus-within {
 }
 
 section .photoContainer img {
-  width: 100%;
+  max-width: 100%;
   -webkit-box-shadow: 5px 5px #f8e71c;
           box-shadow: 5px 5px #f8e71c;
 }
@@ -789,6 +789,13 @@ section p {
   section .firstPost p {
     text-align: right;
   }
+  section .photoContainer {
+    width: 85%;
+  }
+  section .photoContainer img {
+    -webkit-box-shadow: 10px 10px #f8e71c;
+            box-shadow: 10px 10px #f8e71c;
+  }
   section .secondPost {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -809,11 +816,6 @@ section p {
   }
   section .secondPost p {
     text-align: left;
-  }
-  section .photoContainer {
-    width: 85%;
-    -webkit-box-shadow: 10px 10px #f8e71c;
-            box-shadow: 10px 10px #f8e71c;
   }
   section .sectionFounder .contentFounder {
     padding-left: 50px;
@@ -844,6 +846,12 @@ section p {
   }
   .sectionInfo li {
     width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  section .sectionFounder .contentFounder {
+    padding-top: 2%;
   }
 }
 
@@ -1100,8 +1108,13 @@ main.mainSecondary .basicForm input[type="submit"]:focus-within {
     margin-top: 0;
     z-index: 5;
   }
+  main.mainSecondary .photoContainer img {
+    -webkit-box-shadow: -10px 10px #f8e71c;
+            box-shadow: -10px 10px #f8e71c;
+  }
   main.mainSecondary .blogPost {
     padding-left: 6%;
+    margin-left: -9px;
   }
   main.mainSecondary h3 {
     text-align: left;
