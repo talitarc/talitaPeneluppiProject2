@@ -841,7 +841,7 @@ footer p {
 }
 
 header.headerSecondary {
-  background-image: url("./../../../images/blogHeader.jpg");
+  background-image: url("./../images/blogHeader.jpg");
   height: 500px;
 }
 
@@ -1228,7 +1228,7 @@ aside li::before {
 }
 
 header.headerContact {
-  background-image: url("./../../../../project2/images/contactHeader.jpg");
+  background-image: url("./../images/contactHeader.jpg");
 }
 
 header.headerContact .mainTitle {
