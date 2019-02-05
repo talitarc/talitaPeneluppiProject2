@@ -1228,7 +1228,7 @@ aside li::before {
 }
 
 header.headerContact {
-  background-image: url("/./../../../images/contactHeader.jpg");
+  background-image: url(./../../../images/contactHeader.jpg);
 }
 
 header.headerContact .mainTitle {
