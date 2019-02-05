@@ -188,6 +188,28 @@ li {
   list-style-type: none;
 }
 
+p {
+  color: #2c2c2c;
+}
+
+.skipLink {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 99;
+  background: #074115;
+  color: #fff;
+  padding: 2%;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+  font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.skipLink:focus {
+  left: 0;
+}
+
 header {
   background-image: url("./../images/homeHeader.jpg");
   background-position: center center;
@@ -827,7 +849,6 @@ section p {
 
 footer {
   background-color: #4f4f4f;
-  color: white;
   margin: 0;
   font-size: 0.8rem;
   line-height: 2.5rem;
@@ -837,6 +858,7 @@ footer {
 }
 
 footer p {
+  color: white;
   margin: 0;
 }
 
@@ -1186,13 +1208,18 @@ aside li::before {
     margin-top: -85%;
     margin-left: 30%;
     padding: 85% 5%;
-    padding-bottom: 60%;
   }
   aside .photoContainer {
     width: 100%;
   }
   aside .photoContainer {
     margin-top: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  aside .wrapper {
+    padding-bottom: 60%;
   }
 }
 
@@ -1262,7 +1289,7 @@ main.mainSecondary .contactForm textarea {
   background-color: #fff;
 }
 
-main.mainContact .basicForm {
+main.mainContact .contactForm {
   -webkit-box-shadow: -5px 5px #f8e71c;
           box-shadow: -5px 5px #f8e71c;
   background-color: #fff;
@@ -1283,7 +1310,7 @@ main.mainContact .basicForm {
   main.mainSecondary {
     margin-top: -25%;
   }
-  main.mainSecondary .basicForm {
+  main.mainSecondary .contactForm {
     -webkit-box-shadow: -10px 10px #f8e71c;
             box-shadow: -10px 10px #f8e71c;
   }

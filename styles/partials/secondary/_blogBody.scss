@@ -1,0 +1,32 @@
+@media (min-width: 992px) {
+
+    .gridContainer {
+
+        display: grid;
+
+        grid-gap: 0;
+    }
+
+    .gridHeader {
+        grid-column-start: 1;
+        grid-column-end: 12;
+    }
+
+    .gridMain {
+        grid-column-start: 7;
+        grid-column-end: 12;
+    }
+
+    .gridAside {
+        grid-column-start: 1;
+        grid-column-end: 7;
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .gridFooter {
+        grid-column-start: 1;
+        grid-column-end: 12;
+    }
+}

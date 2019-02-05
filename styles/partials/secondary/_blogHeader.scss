@@ -1,0 +1,68 @@
+header.headerSecondary {
+    background-image: url('./../images/blogHeader.jpg');
+
+    height: 500px;
+
+    .mainTitle {
+        top: 35vh;
+    }
+}
+
+// BLOG HEADER STYLES FOR IPAD (MIN-HEIGHT: 768PX)
+
+@media (min-width: 768px) {
+    header.headerSecondary {
+
+
+        div.wrapper {
+            margin: 2% auto;
+        }
+
+        .mainTitle {
+            top: 25vh;
+            left: 6vh;
+        }
+
+        
+    }
+}
+
+// MEDIA QUERY FOR SMALL DESKTOP SCREENS
+
+@media (min-width: 992px) {
+    header.headerSecondary {
+
+        // height: 40vh;
+
+        nav {
+            background-color: black;
+        }
+    }
+
+    header.headerBlog {
+        nav div ul li {
+            a[href*="blog"] {
+                color: $shadowColor;
+            }
+        }
+    }
+
+    header.headerBlog {
+        .mainTitle {
+            top: 0;
+            left: 0;
+
+            margin: 33% 10%;
+        }
+    }
+}
+
+// ADJUSTS FOR BIGGER SCREENS - 1200 PX - W3S
+
+@media (min-width: 1200px) {
+    header.headerBlog {
+        .mainTitle {
+            margin: 24% 10%;
+        }
+    }
+}

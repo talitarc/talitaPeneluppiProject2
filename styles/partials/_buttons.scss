@@ -1,0 +1,29 @@
+button {
+    background: $buttonColor;
+
+    @include headingSection(1rem, 0rem);
+    border: none;
+    margin: 20px;
+
+    a {
+        color: white;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+    
+}
+
+.btnFindOut {
+    height: 50px;
+    width: 200px;
+}
+
+.btnRead {
+    height: 50px;
+    width: 120px;
+}
+
+button:hover,
+button:focus-within {
+        opacity: 0.5;
+    }

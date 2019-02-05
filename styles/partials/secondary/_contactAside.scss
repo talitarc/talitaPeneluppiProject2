@@ -1,0 +1,81 @@
+aside.asideContact {
+
+    .email p {
+        @include headingSection(0.8rem, 0.1rem);
+    }
+
+    .address p {
+        @include bodyText(0.7rem, 0.8rem);
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0 auto;
+        width: 80%;
+        align-items: center;
+        background-color: $sectionBGColor;
+
+        justify-content: left;
+    }
+    ul {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 10%;
+        padding: 0;
+
+        li {
+            padding: 5%;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+
+            a {
+                color: $buttonColor;
+            }
+        }
+
+        li::before {
+            content: "";
+        }
+
+        li:hover,
+        li:focus-within {
+            font-size: 1.5rem;
+            padding: 0;
+        }
+    }
+}
+
+//  IPAD STYLES
+
+@media (min-width: 768px) {
+    aside.asideContact {
+        li {
+            font-size: 1.5rem;
+        }
+
+        li:hover,
+        li:focus-within {
+            font-size: 2rem;
+        }
+    }
+}
+
+//  DESKTOP - SMALL SCREEN STYLES
+
+@media (min-width: 992px) {
+    aside.asideContact {
+        .wrapper {
+            margin-top: 20%;
+        }
+
+        ul {
+            max-width: 60%;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+header.headerContact {
+
+    background-image: url('./../images/contactHeader.jpg');
+
+    .mainTitle {
+        left: 5vh;
+        top: 20vh;
+        width: 45%;
+    }
+
+    
+}
+
+// IPAD STYLES 
+
+@media (min-width: 768px) {
+    header.headerContact {
+
+        nav div ul li {
+            a[href*="contact"] {
+                color: $shadowColor;
+            }
+        }
+        
+        .mainTitle {
+            @include brandStyle(5rem);
+        }
+    }
+}
+
+//  DESKTOP - SMALL SCREEN STYLES
+
+@media (min-width: 992px) {
+    header.headerContact {
+        .mainTitle {
+            top: 0;
+            left: 0;
+
+            margin: 20% 10%;
+
+            width: 43%;
+        }
+    }
+}

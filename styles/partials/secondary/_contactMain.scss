@@ -1,0 +1,45 @@
+main.mainSecondary{
+    .contactForm {
+        input,
+        textarea {
+            background-color: #fff;
+        }
+    }
+}
+
+main.mainContact {
+
+    .contactForm {
+        box-shadow: -5px 5px $shadowColor;
+        background-color: #fff;
+
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+}
+
+//  IPAD STYLES
+
+@media (min-width: 768px) {
+    main.mainSecondary {
+        margin-top: -5%;
+    }
+
+    main.mainContact {
+        .basicForm {
+            z-index: 5;
+        }
+    }
+}
+
+//  DESKTOP - SMALL SCREEN STYLES
+
+@media (min-width: 992px) {
+    main.mainSecondary {
+        margin-top: -25%;
+
+        .contactForm {
+            box-shadow: -10px 10px $shadowColor;
+        }
+    }
+}

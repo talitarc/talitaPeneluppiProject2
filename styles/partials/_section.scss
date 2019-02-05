@@ -1,0 +1,333 @@
+
+
+section {
+
+    .photoContainer {
+        img {
+            width: 100%;
+            box-shadow: 5px 5px $shadowColor;
+        }
+        
+    }
+
+    .secondPost {
+        img {
+            box-shadow: -5px 5px $shadowColor;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        margin: 0 auto;
+
+        
+
+        ul {
+            display: flex;
+
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+    }
+
+    h3 {
+        @include headingSection(1.1rem, 0.1rem);
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    p {
+        @include bodyText(0.8rem, 1.6rem);
+        text-align: center;
+    }
+}
+
+.sectionInfo {
+
+    background-color: $sectionBGColor;
+
+    li {
+        display: flex;
+
+        flex-wrap: nowrap;
+        align-items: flex-start;
+
+        justify-content: left;
+        margin: 10px auto;
+    }
+
+    .fontIcon {
+        display: flex;
+        justify-content: center;
+        margin: 0 10px;
+        background-color: $shadowColor;
+        border-radius: 50%;
+        width: 1em;
+        height: 0;
+        padding: 1em;
+        align-items: center;
+    }
+
+    h3 {
+        margin: 14px 0;
+        text-align: left;
+        
+    }
+
+    p {
+        @include bodyText(0.8rem, 1.6rem);
+        text-align: left;
+    }
+
+}
+
+.bannerSection {
+    width: 100%;
+}
+
+.sectionFounder {
+    margin: 30px auto;
+    padding: 3% 0;
+
+    h3 {
+        @include headingSection(1.3rem, 0.1rem);
+    }
+
+    .contentFounder {
+        display: flex;
+    
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin: 10px auto;
+
+        p {
+            text-align: center;
+        }
+    }
+
+}
+
+.gallerySection {
+    display: flex;
+    margin: 10% auto;
+}
+
+.gallery {
+    margin: 0 2%;
+}
+
+.galleryPhoto1,
+.galleryPhoto2,
+.galleryPhoto3 {
+    width: 100%;
+
+}
+
+// IPAD STYLES - 768PX
+@media (min-width: 768px) {
+
+// IPAD STYLES FOR FIRST SECTION
+
+// FIRST SECTION WRAPPERS/TEXTS ARE BESIDE PHOTO AND NOT ABOVE/BELOW JUST FOR IPAD VISUALIZATION
+
+
+    section {
+
+        .wrapper {
+            align-items: flex-start;
+        }
+
+        .firstPost, 
+        .secondPost {
+            display: flex;
+            position: absolute;
+            
+        }
+
+        .firstPost {
+            top: -40;
+        }
+
+        .firstText {
+            margin: 5%;
+            margin-top: 10%;
+        }
+
+        .secondPost {
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            bottom: -35;
+
+            .wrapper {
+                align-items: flex-end;
+            }
+
+            p {
+                text-align: right;
+            }
+        }
+
+        .secondText {
+            margin: 5%;
+            margin-bottom: 10%;
+        }
+
+        h3 {
+            margin: 0;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+        }
+
+        .btnRead {
+            margin: 0
+        }
+    }
+
+    section.sectionEvents {
+        position: relative;
+        height: 65vh;
+    }
+
+    // SECTION INFO PADDING ADJUSTMENT DUE TO PHOTO OVERLAP
+
+    .sectionInfo {
+        padding-top: 5%;
+    }
+
+    //FOUNDER SECTION STYLES
+
+    section {
+        .sectionFounder {
+                flex-direction: row;
+                flex-wrap: wrap;
+
+                margin: 1% auto;
+                align-items: flex-start;
+
+                .photoContainer{
+                    width: 40%;
+
+                    margin: 4% auto;
+                }
+
+                .contentFounder {
+                    width: 60%;
+                    padding-left: 25px;
+
+                    align-items: flex-start;
+
+                    p {
+                        text-align: left;
+                    }
+                }
+            }
+
+        .btnFindOut {
+            margin: 0;
+        }
+
+        .desktopOnly {
+            display: block;
+        }
+
+        .galleryPhoto1,
+        .galleryPhoto2,
+        .galleryPhoto3 {
+            margin: 20px auto;
+        }
+
+    }
+    
+}
+
+// TO INVERT ORDER FOR DESKTOP: SECTIONEVENTS DISPLAY: FLEX; FIRSTPOST: DISPLAY ROW; SECONDPOST: DISPLAY ROW REVERSE
+
+@media (min-width: 992px) {
+    section {
+
+        .firstPost {
+            flex-direction: column;
+            position: unset;
+
+            margin-top: -25px;
+            margin-bottom: 25px;
+
+            .wrapper {
+                align-items: flex-end;
+            }
+
+            p {
+                text-align: right;
+            }
+        }
+
+        .secondPost {
+            flex-direction: column-reverse;
+            position: unset;
+            margin-bottom: -25px;
+            margin-top: 25px;
+
+            img {
+                box-shadow: -10px 10px $shadowColor;
+            }
+
+            .wrapper {
+                align-items: flex-start;
+            }
+
+            p {
+                text-align: left;
+            }
+
+        }
+
+        .photoContainer {
+            width: 85%;
+
+            box-shadow: 10px 10px $shadowColor;
+        }
+
+        .sectionFounder .contentFounder {
+            padding-left: 50px;
+        }
+
+    }
+
+    section.sectionEvents {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            height: unset;
+
+            position: unset;
+        }
+
+        section {
+            .wrapper ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+            }
+        }
+    
+        .sectionInfo li {
+            width: 50%;
+        }
+
+}
+    
+    
+

@@ -1,0 +1,185 @@
+main.mainSecondary {
+
+    .wrapper {
+        padding: 0;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    // BLOG POSTS STYLES - MOBILE FIRST
+
+    .photoContainer{
+
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+
+        width: 90%;
+
+        margin-top: -1.5em;
+        
+
+        img {
+            width: 100%;
+            
+            box-shadow: -5px 5px $shadowColor;
+        }
+    }
+
+    .blogPost {
+        padding: 10px 0 10px 10px;
+        margin-left: -4px;
+        border-bottom: 2px solid $shadowColor;
+        border-left: 2px solid $shadowColor;
+    }
+
+    h3 {
+        @include headingSection(1.1rem, 0.1rem);
+        text-align: left;
+    }
+
+    .dateSign {
+        @include bodyText(0.6rem, 1rem);
+        font-style: italic;
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    p {
+        @include bodyText(0.8rem, 1.2rem);
+        text-align: left;
+    }
+
+    // COMMENTS STYLES - MOBILE FIRST
+
+    .publicComment {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        margin-bottom: 1em;
+
+        .profileContainer {
+            flex: 0 0 40%;
+            text-align: center;
+        }
+
+        .profileContainer img {
+            max-width: 100%;
+        }
+
+        .singleComment {
+            margin-left: 1em;
+            flex: 3 auto 100%;
+
+        }
+
+        h4 {
+            @include headingSection(0.7rem, 0.1rem);
+            line-height: 1rem;
+            color: $commentDataColor;
+            margin: 0;
+        }
+
+        p {
+            @include bodyText(0.7rem, 1.2rem);
+        }
+    }
+
+    // COMMENT FORM STYLES -MOBILE FIRST
+
+    .basicForm {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        @include formStyle(1rem, 1rem);
+        
+
+        input,
+        textarea {
+            border: none;
+            border-bottom: 2px solid $buttonColor;
+            background-color: $sectionBGColor;
+            margin: 1em 0em;
+
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            height: 2em;
+        }
+
+        textarea {
+            border: 2px solid $buttonColor;
+            padding-top: 30px;
+            padding-left: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            padding: 25px 0 25px 15px;
+        }
+
+        input[type="submit"] {
+            border: 2px solid $buttonColor;
+            background-color: $buttonColor;
+            @include headingSection(1rem, 0rem);
+            color: white;
+
+            height: 50px;
+            width: 100%;
+        }
+
+        input[type="text"]:hover,
+        input[type="text"]:focus-within,
+        input[type="email"]:hover,
+        input[type="email"]:focus-within,
+        textarea:hover,
+        textarea:focus-within {
+            background-color: $shadowColor;
+            opacity: 0.6;
+        }
+
+        input[type="submit"]:hover,
+        input[type="submit"]:focus-within {
+            opacity: 0.5;
+        }
+        
+    }
+}
+
+// MEDIA QUERY FOR IPAD STYLES 
+
+@media (min-width: 768px) {
+    main.mainSecondary {
+        .publicComment .profileContainer {
+            flex: 0 0 20%;
+        }
+    }
+}
+
+// MEDIA QUERY FOR SMALL DESKTOP SCREENS
+
+@media (min-width: 992px) {
+
+    main.mainSecondary {
+        .photoContainer {
+            margin-top: 0;
+            z-index: 5;
+        }
+
+        .blogPost {
+            padding-left: 6%;
+        }
+
+        h3 {
+            text-align: left;
+        }
+    }
+}

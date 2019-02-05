@@ -1,0 +1,236 @@
+// SKIP LINK STYLES
+.skipLink {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 99;
+    
+    background: $commentDataColor;
+    color: #fff;
+    padding: 2%;
+    @include headingSection(1rem, 0.2rem);
+  }
+  
+  .skipLink:focus {
+    left: 0;
+  }
+
+//  HEADER STYLES - MOBILE FIRST
+
+header {
+    background-image: url('./../images/homeHeader.jpg');
+    background-position: center center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 70%;
+
+    flex: 1 1 auto;
+
+    div.wrapper {
+        display: flex;
+        margin: 10% auto;
+        width: 80%;
+        max-width: 1048px;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-self: flex-start;
+    position: relative;
+    width: 100%;
+    padding: 30px 15px;
+
+    ul {
+        display: none;
+        flex-flow: column wrap;
+        position: absolute;
+        top: 25;
+        right: 20;
+        z-index: 5;
+    }
+
+    a  {
+        @include brandStyle(0.8rem);
+        text-transform: uppercase;
+        color: $sectionBGColor;
+
+        padding: 20px;
+    }
+
+    .dropdown {
+        color: $shadowColor;
+        font-size: 2rem;
+        justify-content: end;
+        align-self: flex-end;
+        position: absolute;
+        top: 20;
+        right: 20;
+
+    }
+    
+}
+
+nav:hover ul,
+nav:focus-within ul {
+    display: flex;
+    
+    li {
+        background-color: $footerBGColor;
+        border: 1px solid $shadowColor;
+        line-height: 3rem;
+    }
+}
+
+.mainTitle {
+    max-width: 50%;
+}
+
+h1 {
+    @include brandStyle(3.2rem);
+    color: white;
+    text-align: left;
+    align-self: center;
+    position: absolute;
+    top: 25vh;
+    left: 3vh;
+
+    span {
+        color: $shadowColor;
+    }
+}
+
+// STYLES FOR IPAD SCREEN SIZE
+
+@media (min-width: 768px) {
+    header {
+        height: 600px;
+
+        div.wrapper {
+            margin: 5% auto;
+        }
+
+        h1 {
+            @include brandStyle(6rem);
+            top: unset;
+
+            margin: 30% 10%;
+        }
+
+        div.desktopOnly {
+            display: flex;
+            width: 100%;
+            justify-content: flex-end;
+            margin-top: 200px; // LESS BREAK POINTS WITH THE MARGIN IN PX
+
+            img {
+                max-width: 40%;
+            }
+            
+        }
+    }
+}
+
+// STYLES FOR SMALL DESKTOP SCREEN - W3 SCHOOLS INFO: 992PX
+
+// NAV AND IMG ARE MOVING DOWN WHEN NAV IS HOVER
+
+@media (min-width: 992px) {
+    .mobileOnly {
+        display: none;
+    }
+
+    header {
+
+        // height: 45vh;
+        position: relative;
+
+        div.wrapper {
+            margin: 3% auto;
+            align-items: center;
+        }
+
+        nav:hover ul,
+        nav:focus-within ul {
+            display: flex;
+
+            li {
+                background-color: initial;
+                border: none;
+                line-height: initial;
+            }
+        }
+
+        h1.desktopOnly,
+        ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        h1.navLogo {
+            width: 15%;
+
+            @include brandStyle(1.5rem);
+        }
+
+        nav {
+            padding: 0;
+            position: static;
+
+            justify-content: flex-start;
+
+            h1,
+            ul {
+                position: static;
+            }
+        }
+
+        h1.mainTitle {
+            @include brandStyle(5.5rem);
+            left: unset;
+            z-index: 5;
+            margin: 24% 10%;
+        }
+
+        div.desktopOnly {
+            position: absolute;
+            margin-top: 300px;
+        }
+    }
+
+    header.headerHome {
+        nav div ul li {
+            a[href*="index"] {
+                color: $shadowColor;
+            }
+        }
+    }
+}
+
+// ADJUSTS FOR BIGGER SCREENS - 1200 PX - W3S
+
+@media (min-width: 1200px) {
+    header {
+        
+        h1.mainTitle {
+            @include brandStyle(7.5rem);
+
+            margin: 15% 10%;
+        }
+
+        div.desktopOnly {
+            margin-top: 120px;
+
+            img {
+                max-width: 46%;
+            }
+        }
+    }
+}
