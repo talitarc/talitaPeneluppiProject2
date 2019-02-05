@@ -330,7 +330,7 @@ h1 span {
     display: none;
   }
   header {
-    height: 70vh;
+    height: 45vh;
     position: relative;
   }
   header div.wrapper {
@@ -461,6 +461,11 @@ button a {
 .btnRead {
   height: 50px;
   width: 120px;
+}
+
+button:hover,
+button:focus-within {
+  opacity: 0.5;
 }
 
 section .photoContainer img {
@@ -820,7 +825,7 @@ footer p {
 }
 
 header.headerSecondary {
-  background-image: url("../../../images/blogHeader.jpg");
+  background-image: url("../../../../../images/blogHeader.jpg");
   height: 50vh;
 }
 
@@ -835,6 +840,9 @@ header.headerSecondary {
 }
 
 @media (min-width: 992px) {
+  header.headerSecondary {
+    height: 40vh;
+  }
   header.headerSecondary nav {
     background-color: black;
   }
@@ -1080,7 +1088,7 @@ aside .wrapper {
 }
 
 aside .photoContainer {
-  width: 80%;
+  width: 50%;
   z-index: 5;
 }
 
