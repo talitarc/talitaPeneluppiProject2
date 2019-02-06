@@ -416,6 +416,9 @@ h1 span {
   header div.desktopOnly {
     position: absolute;
     margin-top: 300px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   header.headerHome nav div ul li a[href*="index"] {
     color: #f8e71c;

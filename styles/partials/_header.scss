@@ -202,7 +202,9 @@ h1 {
         div.desktopOnly {
             position: absolute;
             margin-top: 300px;
+            align-items: flex-start;
         }
+        
     }
 
     header.headerHome {
